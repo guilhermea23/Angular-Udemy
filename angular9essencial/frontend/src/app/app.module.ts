@@ -23,7 +23,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { ProductRead22Component } from './components/product/product-read22/product-read22.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -38,7 +38,7 @@ import { MatSortModule } from '@angular/material/sort';
     ProductCrudComponent,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductRead2Component
+    ProductRead22Component
   ],
   imports: [
     BrowserModule,
