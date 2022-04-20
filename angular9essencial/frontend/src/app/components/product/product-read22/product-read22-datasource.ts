@@ -30,11 +30,11 @@ const EXAMPLE_DATA: Product[] = [
 ];
 
 /**
- * Data source for the ProductRead2 view. This class should
+ * Data source for the ProductRead22 view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class ProductRead2DataSource extends DataSource<Product> {
+export class ProductRead22DataSource extends DataSource<Product> {
   data: Product[] = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
@@ -87,22 +87,20 @@ export class ProductRead2DataSource extends DataSource<Product> {
   private getSortedData(data: Product[]): Product[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
-    } else{
-      return data.sort((a, b) => {
-        const isAsc = this.sort?.direction === 'asc';
-        switch (this.sort?.active) {
-          case 'name': return compare(a.name, b.name, isAsc);
-          case 'id': return compare(a.id, b.id, isAsc);
-          default: return 0;
-        }
-      });
     }
+
+    return data.sort((a, b) => {
+      const isAsc = this.sort?.direction === 'asc';
+      switch (this.sort?.active) {
+        case 'name': return compare(a.name, b.name, isAsc);
+        case 'id': return compare(a.id, b.id, isAsc);
+        default: return 0;
+      }
+    });
   }
 }
 
 /** Simple sort comparator for example ID/Name columns (for client-side sorting). */
 function compare(a: string | number, b: string | number, isAsc: boolean): number {
-  console.log(a);
-  console.log(b);
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
