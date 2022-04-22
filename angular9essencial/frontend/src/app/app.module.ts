@@ -16,17 +16,8 @@ import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { ProductRead22Component } from './components/product/product-read22/product-read22.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -36,9 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    ProductCreateComponent,
-    ProductReadComponent,
-    ProductRead22Component
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -49,14 +38,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule,
-    HttpClientModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
